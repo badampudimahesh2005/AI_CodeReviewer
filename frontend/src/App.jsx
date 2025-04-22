@@ -5,6 +5,7 @@ import './App.css'
 import Editor from 'react-simple-code-editor';
 import prism from "prismjs"
 import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 import rehypeHighlight from 'rehype-highlight';
 import "highlight.js/styles/github-dark.css"
@@ -75,6 +76,7 @@ function App() {
           :
           <Markdown
             rehypePlugins={[rehypeHighlight]}
+            remarkPlugins={[remarkGfm]}
           >{review}
           </Markdown>
         }
